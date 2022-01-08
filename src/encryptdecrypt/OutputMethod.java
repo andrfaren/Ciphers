@@ -1,6 +1,6 @@
 package encryptdecrypt;
 
 public interface OutputMethod {
-    void writeMessage(String message, String outputFilePath);
+    void write(String data);
 }
 

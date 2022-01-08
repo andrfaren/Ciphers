@@ -3,8 +3,8 @@ package encryptdecrypt;
 public class OutputToConsole implements OutputMethod {
 
     @Override
-    public void writeMessage(String message, String outputFilePath) {
-        System.out.println(message);
+    public void write(String data) {
+        System.out.println(data);
     }
 
 }

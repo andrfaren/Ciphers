@@ -2,6 +2,24 @@ package encryptdecrypt;
 
 public class UnicodeCipher implements Cipher {
 
+    CipherMode mode;
+
+    public UnicodeCipher(CipherMode mode) {
+        this.mode = mode;
+    }
+
+    @Override
+    public String execute(String message, int key) {
+        switch (mode) {
+            case ENCRYPTION:
+                return encrypt(message, key);
+            case DECRYPTION:
+                return decrypt(message, key);
+            default:
+                throw new IllegalStateException("Unexpected value: " + mode);
+        }
+    }
+
     @Override
     public String encrypt(String message, int key) {
         // Convert message to a char array

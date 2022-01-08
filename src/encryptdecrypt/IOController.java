@@ -1,6 +1,7 @@
 package encryptdecrypt;
 
 public class IOController {
+
     private InputMethod inputMethod;
     private OutputMethod outputMethod;
 
@@ -12,11 +13,11 @@ public class IOController {
         this.outputMethod = outputMethod;
     }
 
-    public String read(String inputFilePath) {
-        return this.inputMethod.readMessage(inputFilePath);
+    public String getInputData() {
+        return inputMethod.load();
     }
 
-    public void write(String message, String outputFilePath) {
-        this.outputMethod.writeMessage(message, outputFilePath);
+    public void write(String data) {
+        this.outputMethod.write(data);
     }
 }

@@ -6,18 +6,29 @@ import java.util.Scanner;
 
 public class InputFromFile implements InputMethod {
 
-    @Override
-    public String readMessage(String inputFilePath) {
-        String message = "";
+    private String filePath;
 
-        File inputFile = new File(inputFilePath);
+    public InputFromFile(String filePath) {
+        this.filePath = filePath;
+    }
+    @Override
+    public String load() {
+
+        StringBuilder fileContent = new StringBuilder();
+
+        File inputFile = new File(filePath);
+
+        // Print location of input file
+        System.out.println(inputFile.getAbsolutePath());
 
         try (Scanner scanner = new Scanner(inputFile)) {
-            message = scanner.nextLine();
+            while (scanner.hasNextLine()) {
+                fileContent.append(scanner.nextLine());
+            }
         } catch (FileNotFoundException e) {
-            System.out.printf("File %s not found.\n");
+            System.out.printf("File %s not found.\n", filePath);
         }
 
-        return message;
+        return fileContent.toString();
     }
 }
