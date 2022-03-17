@@ -1,4 +1,4 @@
-package encryptdecrypt;
+package oopstyle;
 
 public class EncryptionDecryption {
     private CommandArguments commandArguments;

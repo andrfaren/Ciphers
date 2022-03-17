@@ -1,4 +1,4 @@
-package encryptdecrypt;
+package oopstyle;
 
 public class UnicodeCipher implements Cipher {
 

@@ -1,4 +1,4 @@
-package encryptdecrypt;
+package oopstyle;
 
 public interface Cipher {
     String execute(String message, int key);

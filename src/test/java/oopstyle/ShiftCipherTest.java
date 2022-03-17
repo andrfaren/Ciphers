@@ -1,4 +1,4 @@
-package encryptdecrypt;
+package oopstyle;
 
 import org.junit.jupiter.api.Test;
 
