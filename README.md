@@ -1,5 +1,5 @@
 # Ciphers
-A project for encrypting and decrypting messages. This project implements the Strategy design pattern.
+An application that uses the Strategy pattern to enctypt and decrypt messages.
 
 Supports the following ciphers:
   - Caesar (shift)
